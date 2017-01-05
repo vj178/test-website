@@ -42,7 +42,7 @@ collections:
     _hide_content: true
   locations:
     output: true    
-   doctors:
+  doctors:
       output: true
       
 paginate: 10
