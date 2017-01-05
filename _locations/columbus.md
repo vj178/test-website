@@ -1,8 +1,10 @@
 ---
-centerName: LP Cincinnati
+centerName: LP Columbus
 layout: locations
-permalink: /lasikplus-cincinnati/
+permalink: /lasikplus-columbus/
 employees:
   - marino
   - holden
 ---
+
+
