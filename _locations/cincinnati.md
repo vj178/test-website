@@ -1,6 +1,6 @@
 ---
 centerName: LP Cincinnati
-layout: centers
+layout: locations
 permalink: /lasikplus-cincinnati/
 employees:
  - marino
