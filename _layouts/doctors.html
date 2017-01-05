@@ -1,19 +1,24 @@
 ---
 layout: default
 ---
-<div class="post-content">
-This is Doctor Dr. {{page.firstName}} {{page.lastName}}
-  {{ content }}
-</div>
+		<section class="hero" style="background-image: url(https://source.unsplash.com/WNAO036c6FM/2000x1322?a=.png)">
+	<div class="inner-hero text-container">
+    <div class="hero-text-container">
+    This is Doctor Dr. {{page.firstName}} {{page.lastName}}
+      {{ content }}
+    </div>
+    
+    <div class="subtext editable" >
+    Linked to following centers:
+    {% for center in site.locations %}
+      {% for emp in center.employees %}
+       {% assign myemp = '/'|append:emp %}
+           {% if myemp == page.id %}
+             <li><a href="{{center.permalink}}">{{center.centerName | replace_first: 'LP', '' }}</a></li>
+           {% endif %}
+      {% endfor %}  
+     {% endfor %}
+    </div>		
+	</div>
+</section>
 
-<div>
-Linked to following centers:
-{% for center in site.locations %}
-  {% for emp in center.employees %}
-   {% assign myemp = '/'|append:emp %}
-       {% if myemp == page.id %}
-         <li><a href="{{center.permalink}}">{{center.centerName | replace_first: 'LP', '' }}</a></li>
-       {% endif %}
-  {% endfor %}  
- {% endfor %}
-</div>
