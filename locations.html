@@ -1,13 +1,12 @@
 ---
 title: Locations
-description: 'All of our locations'
-
+description: All of our locations
 ---
 
 <section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
-			<h1 class="editable">Visit us today at </h1>
+			<h1 class="editable">List of our locations</h1>
 			<p class="subtext editable">
 			      {% for center in site.locations %}
          <li><a href="{{center.permalink}}">{{center.centerName | replace: 'LP', ''}}</a></li>
