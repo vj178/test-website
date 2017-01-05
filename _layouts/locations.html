@@ -1,8 +1,14 @@
 ---
 layout: default
 ---
-<div class="post-content">
-This is Center: {{page.centerName | replace: 'LP', 'Lasik<i>Plus</i>' }}
+<section class="hero" style="background-image: url(https://www.lasikplus.com/assets/images/home/background-intro-youll_love_your_doctors.jpg)">
+	<div class="inner-hero text-container">
+    <div class="hero-text-container">
+    <h1>This is Center: {{page.centerName | replace: 'LP', 'Lasik<i>Plus</i>' }}
+      {{ content }}
+    </div>
+    
+    <div class="subtext editable" >
 <br/>
 Our Doctors:
 <ul>
@@ -16,5 +22,6 @@ Our Doctors:
 {% endfor %}
 
 </ul>
-
-</div>
+    </div>		
+	</div>
+</section>
