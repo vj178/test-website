@@ -1,8 +1,10 @@
 ---
-centerName: LP Cincinnati
-layout: centers
-permalink: /lasikplus-cincinnati/
+centerName: LP Dayton
+layout: locations
+permalink: /lasikplus-dayton/
 employees:
   - marino
   - holden
 ---
+
+
