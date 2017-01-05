@@ -1,6 +1,8 @@
 ---
-firstName:
-lastName:
+firstName: Vincent
+lastName: Marino
 layout: doctors
-permalink: /first-last/
+permalink: /vincent-marino/
 ---
+
+
