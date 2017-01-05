@@ -40,7 +40,11 @@ exclude:
 collections:
   staff_members:
     _hide_content: true
-
+  locations:
+    output: true    
+   doctors:
+      output: true
+      
 paginate: 10
 paginate_path: "/blog/:num/"
 
