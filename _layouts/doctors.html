@@ -9,7 +9,7 @@ layout: default
     </div>
     
     <div class="subtext editable" >
-     <div class="blog-filter">My Locations:</div>
+     <p class="post-details" > <span class="blog-filter">My Locations:</span></p>
     {% for center in site.locations %}
       {% for emp in center.employees %}
        {% assign myemp = '/'|append:emp %}
