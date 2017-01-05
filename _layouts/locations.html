@@ -1,1 +1,20 @@
+---
+layout: default
+---
+<div class="post-content">
+This is Center: {{page.centerName | replace: 'LP', 'Lasik<i>Plus</i>' }}
+<br/>
+Our Doctors:
+<ul>
+{% for emp in page.employees %}
+ {% assign myemp = '/'|append:emp %}
+ {% for doc in site.doctors %}
+      {% if myemp == doc.id %}
+        <li><a href="{{doc.permalink}}">{{doc.firstName}}</a></li>
+      {% endif %}
+ {% endfor %}  
+{% endfor %}
 
+</ul>
+
+</div>
