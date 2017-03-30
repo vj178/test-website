@@ -5,7 +5,7 @@ node{
     stage("Build") {
       sh "ls"  
       sh "jekyll build"
-      sh "ls _site  
+      sh "ls _site"  
         
     }
 
