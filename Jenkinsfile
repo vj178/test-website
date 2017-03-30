@@ -4,7 +4,9 @@ node{
     checkout scm 
     stage("Build") {
       sh "ls"  
-      sh "jekyll serve"
+      sh "jekyll build"
+      sh "ls _site  
+        
     }
 
 }
