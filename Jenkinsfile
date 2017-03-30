@@ -1,6 +1,6 @@
 node{
 
-    docker.image('jekyll/jekyll').inside {
+    docker.image('jekyll/builder').inside {
     checkout scm 
     stage("Build") {
       sh "jekyll build"
