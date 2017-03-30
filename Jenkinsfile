@@ -23,6 +23,7 @@ if (currentBuild.result == 'UNSTABLE') {
     unstash 'built-site'
 
     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'website', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME']]) {
+        sh 'echo ${env.HOST}'  
       sh 'SSHPASS=$PASSWORD sshpass -e ssh -l $USERNAME ${env.HOST} rm -rf /home/vijay/_site/*'
       sh 'SSHPASS=$PASSWORD sshpass -e scp -r _site/* $USERNAME@${env.HOST}:/home/vijay/_site/'
     }
