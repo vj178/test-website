@@ -1,9 +1,10 @@
 node{
 
-    docker.image('jekyll/builder').inside {
+    docker.image('ruby:latest').inside {
     checkout scm 
     stage("Build") {
-      sh "jekyll build"
+      sh "bundle"
+      sh "jekyll build --drafts"
       sh "ls _site"  
     }
 
