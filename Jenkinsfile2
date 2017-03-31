@@ -1,6 +1,6 @@
 node{
 
-    docker.image('jguyomard/jekyll-builder').inside {
+    docker.image('jekyll/jekyll').inside {
     checkout scm 
     stage("Build") {
       sh "jekyll build"
