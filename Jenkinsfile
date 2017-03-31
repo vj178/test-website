@@ -23,8 +23,8 @@ if (currentBuild.result == 'UNSTABLE') {
     unstash 'built-site'
 
     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'website', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME']]) {
-      sh 'SSHPASS=$PASSWORD sshpass -e ssh -l $USERNAME 172.16.1.55 rm -rf /home/vijay/_site/*'
-      sh 'SSHPASS=$PASSWORD sshpass -e scp -r _site/* $USERNAME@172.16.1.55:/home/vijay/_site/'
+      sh 'SSHPASS=$PASSWORD sshpass -e ssh -l $USERNAME 172.16.1.155 rm -rf /home/vijay/_site/*'
+      sh 'SSHPASS=$PASSWORD sshpass -e scp -r _site/* $USERNAME@172.16.1.155:/home/vijay/_site/'
     }
   }
 }
